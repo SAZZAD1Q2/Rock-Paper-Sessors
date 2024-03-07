@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game</title>
+    </head>
+    <body>
+        
+        <button onClick="
+        console.log(computerPick())
+        ">Rock</button>
+        <button>Paper</button>
+        <button>Sessor</button>
+        <script>
+            function computerPick(){
+                let computerMove = '';
+                const randomNumber = Math.random();
+                if(randomNumber > 0 && randomNumber < 1/3){
+                  computerMove = 'rock';
+                }else if(randomNumber >= 1/3 && randomNumber < 1/2){
+                    computerMove = 'paper';
+                }else if(randomNumber >= 1/2 && randomNumber < 1){
+                    computerMove = 'sessor';
+                }
+                return computerMove;
+            }
+        </script>
+
+    </body>
+</html>
