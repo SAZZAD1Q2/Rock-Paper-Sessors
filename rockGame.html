@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game</title>
+    </head>
+    <body>
+        
+        <button onClick="
+        console.log(window)
+        const computerMove = computerPick();
+        let result = '';
+        if(computerMove == 'rock'){
+            result = 'win!'
+        }else if(computerMove == 'paper'){
+            result = 'Tie';
+        }else if(computerMove === 'sessor'){
+           result = 'Lose!'
+        }
+        alert(`You clicked rock. computer moved to ${computerMove}. You ${result}`)
+        ">Rock</button>
+        <button onClick="
+        const computerMove = computerPick();
+        let result = '';
+        if(computerMove == 'rock'){
+            result = 'win!'
+        }else if(computerMove == 'paper'){
+            result = 'Tie';
+        }else if(computerMove === 'sessor'){
+           result = 'Lose!'
+        }
+        alert(`You clicked paper. computer moved to ${computerMove}. You ${result}`)
+        ">Paper</button>
+        <button onClick="
+        const computerMove = computerPick();
+        let result = '';
+        if(computerMove == 'rock'){
+            result = 'win!'
+        }else if(computerMove == 'paper'){
+            result = 'Tie';
+        }else if(computerMove === 'sessor'){
+           result = 'Lose!'
+        }
+        alert(`You clicked sessor. computer moved to ${computerMove}. You ${result}`)
+        ">Sessor</button>
+        <script>
+            function computerPick(){
+                let computerMove = '';
+                const randomNumber = Math.random();
+                if(randomNumber > 0 && randomNumber < 1/3){
+                  computerMove = 'rock';
+                }else if(randomNumber >= 1/3 && randomNumber < 1/2){
+                    computerMove = 'paper';
+                }else if(randomNumber >= 1/2 && randomNumber < 1){
+                    computerMove = 'sessor';
+                }
+                return computerMove;
+            }
+        </script>
+
+
+    </body>
+</html>
